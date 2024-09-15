@@ -32,3 +32,10 @@ jobs:
 
     - name: Run Playwright tests
       run: npx playwright test
+      
+      - name: Verify Playwright browsers
+  run: |
+    echo "Checking installed browsers..."
+    ls -l ~/.cache/ms-playwright/
+
+      
