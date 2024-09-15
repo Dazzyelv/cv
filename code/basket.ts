@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
 
-export class basket {
+export class Basket {
     constructor(private page: Page) {}
 
     get searchInput(): Locator {

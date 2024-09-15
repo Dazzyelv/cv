@@ -1,7 +1,7 @@
 // tests/search.spec.ts
 import { test } from '@playwright/test';
 import dotenv from 'dotenv';
-import { basket } from '../code/basket';
+import { Basket } from '../code/basket';
 import { Login } from '../code/login';
 
 
@@ -10,8 +10,8 @@ dotenv.config({ path: '.env.home' });
 test('search item', async ({ page }) => {
 
     const homePage = new Login(page);
-    const searchPage = new basket(page);
-    const basketPage = new basket(page);
+    const searchPage = new Basket(page);
+    const basketPage = new Basket(page);
     
     console.log('eneer home page ...');
     await page.goto(process.env.BASE_URL!);
