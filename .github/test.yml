@@ -21,6 +21,9 @@ jobs:
       with:
         node-version: '16'
 
+         run: ls -l ~/.cache/ms-playwright/
+   - name: List installed Playwright browsers
+
     - name: Install dependencies
       run: npm install
 
@@ -32,10 +35,13 @@ jobs:
 
     - name: Run Playwright tests
       run: npx playwright test
-      
+
       - name: Verify Playwright browsers
-  run: |
+        run: |
     echo "Checking installed browsers..."
     ls -l ~/.cache/ms-playwright/
+
+   
+ 
 
       
