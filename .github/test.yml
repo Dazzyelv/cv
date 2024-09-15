@@ -20,6 +20,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '16'
+        
+        - name: Set up Playwright
+  uses: playwright-action/setup-playwright@v1
 
          run: ls -l ~/.cache/ms-playwright/
    - name: List installed Playwright browsers
